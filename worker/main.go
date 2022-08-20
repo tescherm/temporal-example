@@ -17,7 +17,7 @@ func main() {
 	}
 	defer c.Close()
 
-	w := worker.New(c, "pick-first", worker.Options{})
+	w := worker.New(c, "example", worker.Options{})
 
 	w.RegisterWorkflow(example.ExampleWorkflow)
 	w.RegisterActivity(example.ExampleActivity)

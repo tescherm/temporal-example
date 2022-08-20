@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"github.com/pborman/uuid"
-	"github.com/temporalio/samples-go/foo"
 	"go.temporal.io/sdk/client"
 	"log"
 	"time"
@@ -20,8 +19,8 @@ func main() {
 	defer c.Close()
 
 	workflowOptions := client.StartWorkflowOptions{
-		ID:        "pick-first_" + uuid.New(),
-		TaskQueue: "pick-first",
+		ID:        "example_" + uuid.New(),
+		TaskQueue: "example",
 
 		WorkflowTaskTimeout: 1 * time.Hour,
 	}
